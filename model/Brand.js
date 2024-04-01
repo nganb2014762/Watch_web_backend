@@ -14,7 +14,9 @@ virtual.get(function(){
 brandSchema.set('toJSON',{
     virtuals: true,
     versionKey: false,
-    transform: function(doc, ret) { delete ret._id}
+    transform: function(doc, ret) { 
+    delete ret._id},
+    
 })
 
 exports.Brand = mongoose.model('Brand', brandSchema);
